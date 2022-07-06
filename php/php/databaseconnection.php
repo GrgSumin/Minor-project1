@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$usernames = "root";
+$username = "root";
 $password = "";
 $dbname = "movie_ticket_system";
 
-$connection = mysqli_connect($server, $username, $password, $dbname);
+$connection = mysqli_connect($servername, $username, $password, $dbname);

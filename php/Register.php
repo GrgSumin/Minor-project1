@@ -1,5 +1,5 @@
 <?php 
-include 'php\databaseconnection.php';
+include 'databaseconnection.php';
 if(isset($_POST['submit'])){
     $Fname = mysqli_real_escape_string($connection, $_POST['first']);
     $Lname = mysqli_real_escape_string($connection, $_POST['Last']);
@@ -9,17 +9,17 @@ if(isset($_POST['submit'])){
     $phonenumber = mysqli_real_escape_string($connection, $_POST['phonenumber']);
     $user_type = mysqli_real_escape_string($connection, $_POST['user_type']);
 
-    $select = "SELECT * FROM register WHERE Email ='$email' && Password= '$password' ";
-    $result = mysqli_query($connection,$select);
-    if (mysqli_num_rows($result)>0){
+    $select = "SELECT * FROM register WHERE email ='$email' && password= '$password' ";
+    $result = mysqli_query($connection, $select);
+    if (mysqli_num_rows($result) > 0) {
         $error[] = 'user already exists';
     }
     else{
-        if($password != $epassword){
+        if($password != $cpassword){
             $error[] = 'password not matched';
         }
         else{
-            $insert = "INSERT INTO register(FirstName, LastName, Email, Password, Phonenumber, user_type) VALUES('$Fname', '$Lname','$email','$password','$phonenumber','$user_type')";
+            $insert = "INSERT into register(FirstName, LastName, Email, Password, Phonenumber, user_type) VALUES('$Fname', '$Lname','$email','$password','$phonenumber','$user_type')";
          mysqli_query($connection, $insert);
          header('location:Login.php');
         }
@@ -37,7 +37,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
     <h1>REGISTRATION FORM</h1>
-    <form>
+    <form method="POST" action="">
         <label id="Myform">First Name</label>
         <?php 
         if(isset($error)){
@@ -46,13 +46,13 @@ if(isset($_POST['submit'])){
             }
         }
         ?>
-        <input class="name" type="text" name="first" placeholder="First Name">
+        <input class="name" type="text" name="first" placeholder="First Name" required />
         <br>
         <label>Last Name</label>
-        <input class="name" type="text" name="Last" placeholder="First Name">
+        <input class="name" type="text" name="last" placeholder="Last Name"required />
         <br>
         <label>Email</label>
-        <input class="name" type="email" name="email">
+        <input class="name" type="email" name="email" required />
         <br>
         <label>Password</label>
         <input class="name" name="password" type="password" placeholder="enter 8 or more words">
