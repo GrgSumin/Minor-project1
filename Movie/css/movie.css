@@ -1,0 +1,212 @@
+body{
+    /* background-image: url(../assests/seat.jpg); */
+    background-size: cover;
+    position: relative;
+    font-size:20px;
+    margin: 0px;
+}
+.headers{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    font-size: 60px;
+}
+#heads{
+    background-color:orange;
+    color: white;
+    text-align: center;
+}
+.btn{
+    color: white;
+}
+
+.section{
+    background-color:black;
+    text-align: center;
+    
+}
+.section a{
+    text-decoration: none;
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+#selection {
+    background-color: whitesmoke;
+    border: solid 1px;
+    border-color: black;
+    border: radius 5px;
+    margin-left: 20px;
+    padding: 7px 10px 5px 10px;
+    color: black;
+    align-items: center;
+    justify-content: center;
+ 
+ }
+ #movies-container{
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.2);
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: black;
+    border: solid;
+    border-radius: 10px;
+   } 
+ .seat{
+    background-color: rgb(148, 148, 148);
+    height: 30px;
+    width: 35px;
+    margin: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; 
+    text-align:center;
+}
+
+.row {
+    display: flex;
+}
+
+.movie-container {
+    margin: 70px ;
+}
+
+.movie-container{
+    background-color: rgb(0, 0, 0, 0.2);
+    border: black;
+    border: solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+   
+
+}
+.seat.selected{
+    background-color:green;
+}
+
+.seat.Booked{
+    background-color:orange;
+}
+
+.seat:nth-of-type(2){
+    margin-right: 5%;
+}
+.seat:not(.Booked):hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    
+}
+.shown{
+    background-color: rgb(0, 0, 0, 0.2);
+    border: solid;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding-left: 250px;
+    border-radius: 10px;
+    text-align: center;
+    display: center;
+    display: flex;
+   
+     
+} 
+.text{
+    text-align: center;
+    font-size:25px;
+}
+.shown li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px;;
+}
+.Screen{
+    background-image: url(../assests/poster.jpg);
+    background-size: 100% 100%;
+    height:700px;
+    margin:20px 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    box-shadow: 2px 3px 20px 8px black;
+    animation: slider 10s infinite linear;
+}
+@keyframes slider {
+    0% {background-image: url(../assests/poster.jpg);}
+
+    35%{background-image:url(../assests/one.jpg);}
+
+    70%{background-image: url(../assests/kabadi.jpg);}
+}
+.footer{
+    position: absolute;
+    height:100%;
+    background-color:black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size:70px;
+
+}
+
+.Screen1{
+    background-image: url(../assests/poster.jpg);
+    background-size: 100% 100%;
+    height:550px;
+    margin:40px 0;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: solid black;
+    box-shadow: 2px 3px 20px 8px black;
+    animation: slider 10s infinite linear;
+}
+@keyframes slider {
+    0% {background-image: url(../assests/poster.jpg);}
+
+    35%{background-image:url(../assests/one.jpg);}
+
+    70%{background-image: url(../assests/kabadi.jpg);}
+}
+
+.whole {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content:center;
+    align-items:center;
+}
+.image{
+    height: 300px;
+    width: 300px;
+    box-shadow: 2px 3px 20px 8px black;
+    background-size: cover;
+}
+
+.movieSelect {
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 2px 3px 20px 8px black;
+    width:70%;
+
+}
+
+.moviename {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+.time:hover {
+    background-color: gray;
+    border-radius: 20px;
+    padding: 10px;
+
+    /* border: 1px solid black; */
+}
+
+
